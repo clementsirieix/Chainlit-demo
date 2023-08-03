@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Notes App</title>
+</head>
+
+<body>
+  <h1>Simple Notes App</h1>
+  <h2>Existing Notes:</h2>
+  <ul>
+    {% for note in notes %}
+    <li>{{ note.content }}</li>
+    <ul>
+      {% for tag in note.tags %}
+      <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </ul>
+
+  <h2>Add a New Note:</h2>
+  <form action="/create" method="post">
+    <textarea name="note" rows="4" cols="50"></textarea>
+    <br>
+    <input type="submit" value="Add Note">
+  </form>
+</body>
+
+</html>
