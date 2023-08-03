@@ -11,7 +11,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY", "")
 
 notes = []
 
-init_prompt = """initial prompt"""
+init_prompt = """You will be provided with a note, and your task is to convert them into a list of tags to categorize the note. Avoid being verbose, focus on getting a list of tags in the following format. tag1, tag2..."""
 
 template = """Query: {note}"""
 
